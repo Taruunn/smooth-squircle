@@ -1,0 +1,91 @@
+{
+    "name": "smooth-squircle",
+    "version": "0.1.1",
+    "description": "iOS-style squircle corners for React with smart fallback for Shopify mobile browsers and all platforms",
+    "author": "Tarun",
+    "license": "MIT",
+    "keywords": [
+        "squircle",
+        "react",
+        "ios",
+        "rounded-corners",
+        "superellipse",
+        "clip-path",
+        "shopify",
+        "mobile",
+        "ui-component",
+        "smooth-corners",
+        "web-component",
+        "vanilla-js"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Taruunn/smooth-squircle"
+    },
+    "homepage": "https://github.com/Taruunn/smooth-squircle#readme",
+    "bugs": {
+        "url": "https://github.com/Taruunn/smooth-squircle/issues"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./core": {
+            "types": "./dist/core.d.ts",
+            "import": "./dist/core.mjs",
+            "require": "./dist/core.js"
+        },
+        "./web-component": {
+            "types": "./dist/web-component.d.ts",
+            "import": "./dist/web-component.mjs",
+            "require": "./dist/web-component.js"
+        }
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "eslint src --ext .ts,.tsx",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage",
+        "prepublishOnly": "npm run build"
+    },
+    "peerDependencies": {
+        "react": ">=17.0.0",
+        "react-dom": ">=17.0.0"
+    },
+    "peerDependenciesMeta": {
+        "react": {
+            "optional": true
+        },
+        "react-dom": {
+            "optional": true
+        }
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@types/node": "^25.0.9",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "happy-dom": "^20.3.4",
+        "jsdom": "^27.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.3.0",
+        "vitest": "^4.0.17"
+    }
+}
