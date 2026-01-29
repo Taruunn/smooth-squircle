@@ -53,7 +53,7 @@
     ],
     "sideEffects": false,
     "scripts": {
-        "build": "tsup",
+        "build": "tsup && rm -f dist/*.d.mts",
         "dev": "tsup --watch",
         "lint": "eslint src --ext .ts,.tsx",
         "typecheck": "tsc --noEmit",

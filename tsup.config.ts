@@ -11,7 +11,7 @@ export default defineConfig([
         treeshake: true,
         external: ['react', 'react-dom'],
         minify: true,
-        sourcemap: true,
+        sourcemap: false,
     },
     // Core-only bundle (framework-agnostic)
     {
@@ -20,7 +20,7 @@ export default defineConfig([
         dts: true,
         treeshake: true,
         minify: true,
-        sourcemap: true,
+        sourcemap: false,
     },
     // Web Component bundle
     {
@@ -29,6 +29,6 @@ export default defineConfig([
         dts: true,
         treeshake: true,
         minify: true,
-        sourcemap: true,
+        sourcemap: false,
     },
 ]);
